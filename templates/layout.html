@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partido Libertario Peruano - PLP</title>
+
+    <!-- Icono -->
+    <link rel="icon" href={{ url_for('static', filename = 'img/logo.png') }}>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Normalize -->
+    <link rel="stylesheet" href={{ url_for('static', filename = 'css/normalize.css') }}>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href={{ url_for('static', filename = 'css/style.css') }}>
+
+</head>
+<body>
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal__container">
+            <nav class="nav">
+                <ul>
+                    <li><a href="/"><p>Inicio</p></a></li>
+                    <li><a href="about"><p>Quienes somos</p></a></li>
+                    <li><a href="contact"><p>Contacto</p></a></li>
+                    <li><a href="afiliate"><p>Afíliate</p></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- End Modal -->
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <img class="logo" src="../static/img/logo.png" alt="Logo del Partido Libertario Peruano">
+                <a href="#modal"><i class="burger fa-solid fa-bars"></i></a>
+                <ul>
+                    <li><a href="/"><p>Inicio</p></a></li>
+                    <li><a href="about"><p>Quienes somos</p></a></li>
+                    <li><a href="contact"><p>Contacto</p></a></li>
+                    <li><a href="afiliate"><p>Afíliate</p></a></li>
+                </ul>
+            </nav>
+        </header> 
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="../static/js/main.js"></script>
+</body>
+</html>
